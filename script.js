@@ -1,7 +1,8 @@
 const buttons = document.querySelectorAll(".btn");
-console.log(buttons);
 
-const greyBtn = document.getElementById("grey");
-const greenBtn = document.getElementById("green");
-const orangeBtn = document.getElementById("orange");
-const yellowBtn = document.getElementById("yellow");
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    document.body.style.backgroundColor = e.target.id;
+    // console.log(`"btn clicked", ${btn.id}`);
+  });
+});
